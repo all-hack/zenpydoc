@@ -4,9 +4,11 @@ html{font-family: 'Alegreya', serif;}
 .row div
 {
 	width:85%;
+	float: center;
 /*	border-style: solid;
 	border-color: red;
 	border-width: 1px;*/
+
 }
 
 .row div h2{
