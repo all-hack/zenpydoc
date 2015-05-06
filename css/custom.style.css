@@ -1,0 +1,105 @@
+.row div
+{
+	width:85%;
+/*	border-style: solid;
+	border-color: red;
+	border-width: 1px;*/
+}
+
+.row div h2{
+
+	text-decoration: underline;
+}
+
+.border
+{
+	border-style: solid;
+	border-color: black;
+	border-width: 1px;
+}
+
+table{
+	table-layout: fixed;
+}
+
+table > thead > tr > td{
+	font-size: 18px;
+	font-weight: bold;
+  	background-color: whitesmoke;
+
+}
+
+tbody.vertical > tr > td
+{
+	vertical-align: middle;
+}
+
+.td5{
+	table-layout: fixed;
+	overflow: auto;
+	width: 50%;
+	max-width: 50%;
+}
+
+.td4{
+	table-layout: fixed;
+	overflow: hidden;
+	width: 40%;
+	max-width: 40%;
+}
+
+.td3{
+	table-layout: fixed;
+	overflow: hidden;
+	width: 30%;
+	max-width: 30%;
+}
+
+.td2{
+	table-layout: fixed;
+	overflow: hidden;
+	width: 20%;
+	max-width: 20%;
+}
+
+.td1{
+	table-layout: fixed;
+	overflow: hidden;
+	width: 10%;
+	max-width: 10%;
+}
+
+td{
+	vertical-align: center;
+}
+
+
+span.function{
+	color: red;
+	text-shadow: none;
+
+}
+
+span.premiseObject{
+	color: blue;
+	text-shadow: none;
+
+}
+
+span.object{
+	color: seagreen;
+	text-shadow: none;
+}
+
+span.index{
+	color: fuchsia;
+	text-shadow: none;
+}
+
+span.brackets{
+	color: black;
+  	/*text-shadow: -.45px 0 black, 0 .45px black, .45px 0 black, 0 -.45px black;*/
+}
+
+
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>the Zen of Pydoc</title>
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
+<link rel="stylesheet" type="text/css" href="css/custom.style.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">the Zen of Pydoc</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="http://www.tutorialrepublic.com" target="_blank">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="text-center">
+                <span style="color:#e74c3c; text-shadow: -.52px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">The</span> 
+                <span style="color:#2ecc71; text-shadow: -.52px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">Zen</span> 
+                <span style="color:#3498db; text-shadow: -.52px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">of</span> 
+                <span style="color:#9b59b6; text-shadow: -.52px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">Pydoc</span>
+                <img src="img/logo.png" style="width:100px; height:100px">
+                </h1>
+            <h2 class="text-center">
+                <span style="color:#e74c3c; text-shadow: -.52px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">Your</span> 
+                <span style="color:#f39c12; text-shadow: -.7px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">code is</span>  
+                <span style="color:#f1c40f; text-shadow: -.52px 0 black, 0 .52px black, .6px 0 black, 0 -.6px black">beautiful,</span> 
+                <span style="color:#2ecc71; text-shadow: -.52px 0 black, 0 .52px black, .6px 0 black, 0 -.6px black">your</span> 
+                <span style="color:#3498db; text-shadow: -.52px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">documentation</span> 
+                <span style="color:#9b59b6; text-shadow: -.52px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">should</span> 
+                <span style="color:#9b59b6; text-shadow: -.52px 0 black, 0 .52px black, .52px 0 black, 0 -.52px black">be too</span></h2>
+            <p class="text-center">a layman's interpretation of Python 2.7 documentation from <a href ="https://docs.python.org/2" target="_blank">docs.python.org</a> designed for one-glance readibility and comprehension</p>
+        </div>
+        <div class="row">
+            <div class="col-lg-1 center-block" >
+                <h2 class="text-center">lists</h2>
+                <p class="text-center">lists are the workhorse of python, essentially they are an indexed data structure that can hold elements of any datatypes, who's size can be changed dynamically on the fly. More detailed documentation provided at <a href ="https://docs.python.org/2/tutorial/datastructures.html" target="_blank">docs.python.org</a> </p>
+                <br/>
+                <p style="font-size: 24px" class="text-center">Basic Python Functions for <span class="premiseObject" style="text-decoration: underline">List objects</span></p>
+                <table class="table vertical">
+                    <thead class="vertical">
+                        <tr>
+                            <td class="td1 text-center"><span class="function">Function</span> Call</td>
+                            <td class="td2 text-center">What it does</td>
+                        </tr>                        
+                    </thead>
+                    <tbody class = "vertical">
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">extend(<span class="object">[list2]</span>)</span></td>
+                            <td class="td2 text-center">Adds all the elements in <span class="object">[list2]</span> to the end of <span class="premiseObject">list</span> in order that they appear in <span class="object">[list2]</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">append(<span class="object">object</span>)</span></td>
+                            <td class="td2 text-center">Adds <span class="object">object</span> to the end of the <span class="premiseObject">list</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">insert(<span class="index">index</span>, <span class="object">object</span>)</span></td>
+                            <td class="td2 text-center">Inserts <span class="object">object</span> at position <span class="index">index</span> in the <span class="premiseObject">list</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">remove(<span class="object">object</span>)</span></td>
+                            <td class="td2 text-center">Removes the first element from the <span class="premiseObject">list</span> who’s value == <span class="object">object</span>; produces a ValueError if <span class="object">object</span> is not in <span class="premiseObject">list</span></td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">pop(<span class="brackets">[<span class="object">object</span>]</span>)</span></td>
+                            <td class="td2 text-center">Removes the element at <span class="index">index</span> in the <span class="premiseObject">list</span> and returns it. If no <span class="index">index</span> is provided removes and returns the last element in the <span class="premiseObject">list</span> (the <span class="brackets">[ ]</span> indicates that the argument within the <span class="brackets">[<span style="color:black; text-shadow:none">brackets</span>]</span> is optional)</td>
+                        </tr>
+
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">index(<span class="object">object</span>)</span></td>
+
+                            <td class="td2 text-center">Returns the <span class="index">index</span> of the first element in the <span class="premiseObject">list</span> who’s value == <span class="object">object</span>; produces a ValueError if <span class="object">object</span> is not in <span class="premiseObject">list</span></td>
+                        </tr>
+                        
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">count(<span class="object">object</span>)</span></td>
+
+                            <td class="td2 text-center">Returns the number of times <span class="object">object</span> appears in the <span class="premiseObject">list</span></td>
+                        </tr>
+                         
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">sort(<span class="brackets">[<span class="function">reverse= <span class="object">boolean_value</span></span>]</span>)</span></td>
+
+                            <td class="td2 text-center">Sorts the elements of the <span class="premiseObject">list</span>; optional parameter <span class="function">reverse</span> is set by a <span class="object">boolean_value</span> determining if the <span class="premiseObject">list</span> is sorted backwards or not. There are other optional parameters (<span class="function">cmp, key</span>) to customize sorting, read full documentation for more info.</td>
+                        </tr>                         
+                        <tr>
+                            <td class="td1 text-center"><span class="premiseObject">list</span>.<span class="function">reverse()</span></td>
+
+                            <td class="td2 text-center">Reverses the order that the elements appear in the <span class="premiseObject">list</span></td>
+                        </tr>
+                    </tbody>    
+
+<!--<span class="object">object</span>
+<span class="function">Function</span>
+<span class="premiseObject">list</span>
+<span class="index">index</span>
+<span class="brackets">[]</span>-->
+                </table>
+
+            </div>
+           
+        </div>
+        <hr>
+        <div class="row">
+            <div class="center-block">
+                <footer>
+                    <p class="text-center">&copy; Copyright 2015 Zen Pydoc</p>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
