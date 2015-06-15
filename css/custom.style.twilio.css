@@ -1,0 +1,23 @@
+.jumbotron{
+
+	padding-bottom: 8px;
+
+}
+
+.b-red {
+
+	border-style: solid;
+	border-color: red;
+	text-align: center;
+}
+
+.b-black{
+
+	border-style: solid;
+	border-color: black;
+
+}
+
+.textDiv {
+	width: 90%;
+}
