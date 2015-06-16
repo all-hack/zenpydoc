@@ -7,11 +7,17 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="css/custom.style.twilio.css"> 
 <link href='http://fonts.googleapis.com/css?family=Alegreya' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Libre+Baskerville' rel='stylesheet' type='text/css'>
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
 
-<style type="text/css"> *{font-family: 'Alegreya', serif;}</style>
+font-family: 'Libre Baskerville', serif;
+<style type="text/css"> *{ 
+    /*font-family: 'Libre Baskerville', serif;*/
+    font-family: 'Alegreya', serif;
+    }
+</style>
 
 </head>
 <body>
@@ -32,25 +38,27 @@
         </div>
     </nav>
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-center">
-                From 0 to Hello:
-            </h1>
-            <h2 class="text-center">
-                Baby steps in Android development
-            </h2>            
+        <div class="jumbotron" id="jumbotron">
+            <h1 class="text-center" style="font-size:360%">
+                From 0 to Hello: <span style="font-size:70%;">Baby steps in Android development</span>
+            </h1>         
         </div>
         <div class="row">
-            <div class="col-lg-1 center-block" >
-                <div class="b-red">
-                    <h1 style='text-align:left; '>Background</h2>
+            <div class="col-lg-12 center-block" >
+                <div style="padding-left:1%;">
+                    <h1>Background</h2>
                     <div class="textDiv center-block">
-                        Welcome! Today we are going to go from not knowing how to build an Android app to 
+                        Welcome! Today we are going to get past our lack of knowledge about Android apps and reach the novice programers first milestone, the awe inspiring Hello World application. 
+                        We are going to be using a Mac so if you have another OS you can follow along, but it may make more sense to look for a different guide. Now let's talk about Android for a little bit. Android is a framework built ontop of java meaning that Android apps are written in java. Knowing the ins and outs of java certainly makes Android development easier, but it is by no means a requirment. In fact because Android is a framework, no previous programing experience is needed to learn how to make Android apps. The core functionality of Android apps are controlled by making use of the code already written by Google in the Android framework. 
+                        <br>
+                        <br>
+                        Think of it like putting together a 1000 piece puzzle, except the guiding picture is our imagination and the pieces are code written for us by experts at Google. All we have to do is put the right pieces in the right place to make the picture in our head a reality. 
+
 
 
                     </div>  
 
-                    <h1  style='text-align:left; '>Setting up our computer</h1>
+                    <h1>Setting up our computer</h1>
                     <div class="textDiv center-block">
                             First, before we do anything we have to make sure that our Mac system software is up to date. The next step is to check if we have JDK 6 (Java Developer Kit) or higher installed, we can do this by typing the command javac -version into a terminal window. If the appropriate JDK is not installed we will have to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download it</a>. 
                             <br>
@@ -58,7 +66,7 @@
                             What we need is the Mac OS x64 version of the JDK, to download it first click the icon that says Java, then accept Oracle's license agreement and then click the download link associated with the Mac OS x64 version of the JDK. A .dmg file will then be downloaded and put into our browser's default download folder, it should be called something along the lines of jdk-8u45-macosx-x64.dmg. Double click the .dmg file to start the installation process. Installing the JDK should be very simple just follow the instructions provided by the installer and we'll let the computer do all the work. Once it's finished we can double check that everything was successful by typing javac -version once more in the terminal.                            
                     </div>
                     
-                    <h1 style='text-align:left;'>Setting up Android Studio</h1>
+                    <h1>Setting up Android Studio</h1>
                     <div class="textDiv center-block">
                         Now that our computer is set up we need to <a href="https://developer.android.com/sdk/index.html">download Android Studio</a>. We're going to click on download Android Studio for Mac, then accept Google's terms and conditions, and then click download Android Studio for Mac. A .dmg file will then be downloaded and put into our browser's default download folder, it should be called something along the lines of android-studio-ide-141-mac.dmg. 
                         <br>
@@ -78,7 +86,7 @@
                         Now might be a good time to eat lunch or brew some coffee because all of these downloads are going to take a long time to finish, and that is completely normal. 
                     </div>
 
-                    <h1 style='text-align:left;'>Starting the project</h1>
+                    <h1>Starting the project</h1>
                     <div class="textDiv center-block">
                         Now that we have Android Studio set up and ready to go it's time to start our first project! 
                         <br>
@@ -120,7 +128,7 @@
                         </div>
                     </div>
                     
-                    <h1 style='text-align:left;'>Reviewing the Project</h1>
+                    <h1>Reviewing the Project</h1>
                     <div class="textDiv center-block">                
                         We now finally have our project opened in Android Studio. Android apps are composed of many different parts, and our structure of our project can be looked at from a multitude of points of view, but we will focus on only one, the Android Project View. To find the Android Project view go to the side panel of make sure Project is selected, and then on the top bar of the side panel select Android from the drop down menu. There should be two top level containers, app and Gradle Scripts. We will ignore Gradle Scripts for the moment.
 
@@ -183,7 +191,7 @@
 
                     </div>                    
 
-                    <h1 style='text-align:left;'>Running the Application</h1>
+                    <h1>Running the Application</h1>
                     <div class="textDiv center-block">
                         Now that we have configured our Android app and we have a basic understand of the pieces that Android apps are composed of we can finally run the app. We are going to do this using a tool called an emulator. An emulator is nothing more than a simulation of a phone that is run on your computer. 
                         <br>
