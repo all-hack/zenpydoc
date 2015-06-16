@@ -28,11 +28,7 @@
                 <a class="navbar-brand" href="#">From 0 to Hello</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="http://www.tutorialrepublic.com" target="_blank">Home</a></li>
-                </ul>
-            </div>
+            
         </div>
     </nav>
     <div class="container">
@@ -47,9 +43,11 @@
         <div class="row">
             <div class="col-lg-1 center-block" >
                 <div class="b-red">
-                    <h1>Background</h2>
-                    <div class="textDiv center-block b-black">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <h1 style='text-align:left; '>Background</h2>
+                    <div class="textDiv center-block">
+                        Welcome! Today we are going to go from not knowing how to build an Android app to 
+
+
                     </div>  
 
                     <h1  style='text-align:left; '>Setting up our computer</h1>
@@ -123,8 +121,61 @@
                     </div>
                     
                     <h1 style='text-align:left;'>Reviewing the Project</h1>
-                    <div class="textDiv center-block b-black">
-                        
+                    <div class="textDiv center-block">                
+                        We now finally have our project opened in Android Studio. Android apps are composed of many different parts, and our structure of our project can be looked at from a multitude of points of view, but we will focus on only one, the Android Project View. To find the Android Project view go to the side pannel of make sure Project is selected, and then on the top bar of the side pannel select Android from the drop down menu. There should be two top level containers, app and Gradle Scripts. We will ignore Gradle Scripts for the momment.
+
+                        <h3>app</h3>
+                        <div>
+                            The app container contains everything in our application. We are going to spend a little time understanding some of the basic pieces of Android apps and how they fit together. When we expand the app container we see that it there are 3 more containers within it. These are manifests, java, and res. 
+
+                            <h4>manifests</h4>
+                            <div>
+                                This container holds all the manifest files for the application. Manifest are kind of like blueprints  for modules. In our case there is only one manifest the AndroidManifest and it is very important. This XML file tells the Androif system the pieces of your app are and what they are called, so that the system can refer to and use them appropriately. For the momment that is all we need to know. 
+                            </div>
+
+
+                            <h4>res</h4>
+                            <div>
+                                This container holds all the resource files for the application. Resources are the pieces of the application that the users see. There are a few folders in this container but we are only going to focus on the layour folder.
+
+                                <h4>layout</h4>
+                                <div>
+                                    This folder contains the layout for all of the activities in our application. In this case since we only have one application there is only one XML file, called activity_main.xml. Layout files are the blueprint of activities, and they are how activities know what, where, and how to display things to the user. Layout files as we will see later are passed to activities, and thus multiple activities can use the same layout file. 
+                                </div>  
+
+                            </div>
+
+                            <h4>java</h4>
+                            <div>
+                                This container holds all the source files for the application. Source files essentially define the behavior of the application. Our java container has two packages both of them with the same name, which if we remember is the same package name that was generated for out application during the configuration portion of the application. The second package is for tests which is something we will ignore for now, the first package contains a java file called MainActivity, which is what we called our main activity in the activity configuration portion of creating this application. By clicking on it we open up a file called MainActivity.java, which is the actual code that dictates the behavior of our application. 
+
+                                <h5>MainActivity.java</h5>
+                                <div>
+                                    This file extends the ActionBarActivity, which means that it is a new class that inherits the properties of the ActionBarActivity, which inturn inherited the properties of the Activity class. There are three functions in this class, but we will only talk about one, the onCreate() function.
+                                    <br>
+                                    <br>
+                                    protected void onCreate(Bundle savedInstanceState)
+                                    <br>
+                                    For the momment just ignore the key words protected and void, for today they are not important. The
+                                    onCreate(Bundle savedInstanceState) is the function that dictates what MainActivity will do when it is created. It is passed a parameter called of with a datatype of Bundle. Bundles are containers that hold particular variables, they can be used to share data between activites. For now that is all we need to know about Bundles. 
+                                    <br>
+                                    <br>
+                                    super .onCreate(savedInstanceState). 
+                                    <br>
+                                    This calls the inheritted function onCreate that MainActivity inheritted from ActionBarActivity. It is a framework call. We pass it the Bundle object that was passed to the onCreate() so that the function in the ineheritted class has access to the objet. 
+                                    <br>
+                                    <br>
+                                    setContentView(R.layout.activity_main)
+                                    <br>
+                                    setContentView() is a function that MainActivity has inheritted and it sets the view, what the user sees and interacts with, to the View object that we pass to the function. In our case we pass it R.layout.activity_main which is a view that is generated from the XML file in the layout folder contained in res. R is a class that is auto-generated from our resources in our res container by the IDE. By passing R.layout.activity_main we make sure that the Android System grabs the right file object. 
+                                </div>                    
+                            </div>
+
+
+
+                        </div>
+
+                         We did not, and will not be editing anything since the template Blank Activity is a simple hello world app as it stands. We know have a rough understanding of how the pieces of Android applications fit together, All that is left is to run the application!
 
 
 
@@ -183,7 +234,7 @@
                             It may not seem like you did anything, but what we did today was actually a lot. This process we went through is known as Onboarding. It is the process of acquiring, configuring, and achieving basic literacy of all of the software and tools that we to build the applications we want to build. In major corporations this process of Onboarding can take up to a month and we managed to do the same thing (albeit significantly smaller scope) in a day! 
                             <br>
                             
-                            <h3>Rome was not built in a day, programming is something you learn over a 1000 tiny steps, and Android is no different.</h3>
+                            <h3 style="text-align:center;">Rome was not built in a day. <br>Programming is something you learn over a 1000 tiny steps, and Android is no different.</h3>
                         </div>
 
 
