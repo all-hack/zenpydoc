@@ -41,7 +41,7 @@
                 From 0 to Hello:
             </h1>
             <h2 class="text-center">
-                The first steps in Android development
+                Baby steps in Android development
             </h2>            
         </div>
         <div class="row">
@@ -54,31 +54,140 @@
 
                     <h1  style='text-align:left; '>Setting up our computer</h1>
                     <div class="textDiv center-block">
-                        <p>
                             First, before we do anything we have to make sure that our Mac system software is up to date. The next step is to check if we have JDK 6 (Java Developer Kit) or higher installed, we can do this by typing the command javac -version into a terminal window. If the appropriate JDK is not installed we will have to <a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download it</a>. 
                             <br>
                             <br>
-                            What we need is the Mac OS x64 version of the JDK, to download it first click the icon that says Java, then accept Oracle's license agreement and then click the download link associated with the Mac OS x64 version of the JDK. A .dmg file will then be downloaded and put into your browser's default download folder, it should be called something along the lines of jdk-8u45-macosx-x64.dmg. Double click the .dmg file to start the installation process. Installing the JDK should be very simple just follow the instructions provided by the installer and let your computer do all the work. Once it's finnished you can double check that everything was successful by typing javac -version once more in the terminal.                            
-                        </p>
+                            What we need is the Mac OS x64 version of the JDK, to download it first click the icon that says Java, then accept Oracle's license agreement and then click the download link associated with the Mac OS x64 version of the JDK. A .dmg file will then be downloaded and put into our browser's default download folder, it should be called something along the lines of jdk-8u45-macosx-x64.dmg. Double click the .dmg file to start the installation process. Installing the JDK should be very simple just follow the instructions provided by the installer and we'll let the computer do all the work. Once it's finnished we can double check that everything was successful by typing javac -version once more in the terminal.                            
                     </div>
                     
                     <h1 style='text-align:left;'>Setting up Android Studio</h1>
                     <div class="textDiv center-block">
-                        Now that our computer is set up we need to <a href="https://developer.android.com/sdk/index.html">download Android Studio</a>. Accept Google's license agreement
-
-
-
-
+                        Now that our computer is set up we need to <a href="https://developer.android.com/sdk/index.html">download Android Studio</a>. We're going to click on download Android Studio for Mac, then accept Google's terms and conditions, and then click download Android Studio for Mac. A .dmg file will then be downloaded and put into our browser's default download folder, it should be called something along the lines of android-studio-ide-141-mac.dmg. 
+                        <br>
+                        <br>
+                        Double click the .dmg file and then drag Android Studio into our Applications folder. Double click the Android Studio icon to start the installation proccess. Android Studio is going to ask us if we want to import any settings from a previous version of Android Studio. Since we are doing a fresh install we will select the bottom option to not import any settings, however if we were attempting to manually update Android Studio this would be an easy way to transfer all of our settings from our previous version. Android Studio is then going to launch a set up wizard which will streamline and ease the installation process. 
+                        <br>
+                        <br>
+                        Android is going to ask us if we want to do a Standard installation or a Custom installation, we are going to select the Standard type, it's going to make our lives a lot easier. Now we have to accept Google's license agreement to continue with the installation. Each Android Studio package has its own license agreement and there are many packages. Accepting the license agreement by category is easier, categories are marked by a down arrow that collapses the list of packages when clicked on. Once we have agreed to the license agreement we can click finnish to install Android Studio. Now Android Studio is completely installed onto our computer. 
+                        <br>
+                        <br>
+                        Unfortunately the setup process is not quite finnished. Android Studio is an IDE (Integrated Development Environment) it allows us to use essential tools that we need to build our very first Android app, and allows us to add new tools as the scope of our application demands them. We know have to add just a few more tools, or packages to Android Studio. 
+                        <br>
+                        <br>
+                        After finnishing the install Android Studio should have launched a small window containing two panels, one labeled Recent Projects and the other Quick Start. We will call this the Welcome Screen from now on. Under Quick Start we are going to select configure. Then we are going to select SDK Manager. This will open up Android Studio's SDK (Software Developer Kit) Manager, which is a tool we use to download and manage new packages. We can download packages individually or as groups, with the same interface that we previously used for license agreaments. You may have noticed that Android Studio already selected a few packages for us to download, that's okay leave them be. Minimize the drop down arrows and select the Tools group and the Android 5.1.1 (API 22) group. Then click install packages. Accept the licenses and click install.
+                        <br>
+                        <br>
+                        Now might be a good time to eat lunch or brew some coffee because all of these downloads are going to take a long time to finish, and that is completely normal. 
                     </div>
 
-                    <h1>Starting the project</h1>
-                    <div class="textDiv center-block b-black">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    <h1 style='text-align:left;'>Starting the project</h1>
+                    <div class="textDiv center-block">
+                        Now that we have Android Studio set up and ready to go it's time to start our first project! 
+                        <br>
+                        Go back to the Welcome Screen and select Start a new Android Studio project. The project configuration GUI (Graphical User Interface) should pop up. This configuration has three phases: Project Configuration, Target Android Device Configuration, and Template Activity Selection.
+                        <br>
+                        <h3>Project Configuration</h3>
+                        <div>
+                            The Project Configuration phase has four components: the Application Name, Company Domain, Package Name, and Project Location. 
+                            <br>
+                            <br>
+                            The Application Name is the name of the app that will appear in the Home screen of devices. 
+                            <br>
+                            <br>
+                            The Package Name is the unique identifier that Android will use for our project/package. For now we can think of the difference between projects and packages as similar to the difference between organizations and departments. Organizations and departments abstract logical containers of people. Organizations contain departments, however a small organizations can be taken and turned into a department of a bigger rganizations. Similarly projects and packages are both abstract logical containers of functionality, but projects contain packages, and can inturn become packages of larger projects. The Package Name is generally automatically generated as a combination of the Company Domain and the Application Name. This is to a practice to easily prevent duplicate Package Names. Two companies may have two different Android apps with the same name, but one company will not have two different Android apps with the same name. Thus by combining the Company Domain and Application Name we have an easy and memorable unique identifier. 
+                            <br>
+                            <br>
+                            The Company Domain is the domain name or url of the company developing the Android app. It is used to generate the Package Name. Unless we are planning to release our app into the Google Play store, it is not important, and anything will do. 
+                            <br>
+                            <br>
+                            The Project Location is the location in our directory structure that our project will be saved in. This will generally store the project in a directory matching the Application Name in the AndroidProjects directory in our home directory, ensuring that users are only able to interact with their own projects. 
+                        </div>
+                        <h3>Target Android Device Configuration</h3>
+                        <div>
+                            The Target Android Device Configuration phase has one component with four options. In this phase we choose what kind of device, and the minimum SDK our application is being made for. Since we are building a mobile application we're not going to worry about TV, Wear, or Glass, and we will leave those unchecked for another day. After making sure that Phone and Tablet is checked, we are going to select API 15: Android 4.0.3 (IceCreamSandwich) as our Minimum SDK. The Minimum SDK represents the minimmum version of Android that a user needs to have to use our app, it is the lower limit of support we are setting for our application. We are choosing this particular SDK because the number of Android devices below this SDK is so small that it is not worth spending the time supporting those devices. Google has a <a href="https://developer.android.com/about/dashboards/index.html">breakdown of devices that are active on Google Play, divided by SDK</a>. Google will not show our application to devices that are using a version of Android older than the Minimum SDK we set. 
+                        </div>
+                        <h3>Template Activity Selection</h3>
+                        <div>
+                            The Template Activity Selection phase is also one component with multiple options. Each option is a different type of Template Activity we can use to make the common first steps of developing particular types of applications faster. We are going to select Blank Activity in a second, right after we learn what exactly an Activity is. 
+                            <br>
+                            <br>
+                            Activities are a pre-determined class in the Android framework and they are the building blocks of the UI (User Interface). All applications with a UI must inherit this class to create windows that the user can interact with. Most applications with a UI will have one activity designated as the main activity that will be the first activity to be launched. Understanding how Activities work and their life-cycle is vital to proper Android development, however for today this is enough detail to move forward. 
+                            <br>
+                            <br>
+                            Now we are going to select the Blank Activity option from the Template Activity Selection phase and click next. Since we choose a template Activity we will now be presented with a configuration screen for that Activity. 
+                            <br>
+                        
+                            <h3>Activity Configuration</h3>
+                            This screen has four components that are all basically just identifiers that we and the Android framework will use to keep track of the elements that are automatically generated for us. These elements are the Activity Name, the Layout Name, the Title, and the Menu Resource Name. The Activity Name is simply the identifier we will use to refer to our main Activity. The Layout Name is the identifier we will use to refer to the Layout of our main Activity. The Title is will be the what our Activity displays as its Title in the Action bar (the bar at the top of many Android apps). The Menu Resource Name is the identifier we will use to refer to our options menu, which is a part of the Action Bar. In this particular template the Title is on the left side of the Action Bar and the Options Menu is on the right side. 
+                        </div>
                     </div>
-
-                    <h1>Running the Application</h1>
+                    
+                    <h1 style='text-align:left;'>Reviewing the Project</h1>
                     <div class="textDiv center-block b-black">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        
+
+
+
+
+
+                    </div>                    
+
+                    <h1 style='text-align:left;'>Running the Application</h1>
+                    <div class="textDiv center-block">
+                        Now that we have configured our Android app and we have a basic understand of the pieces that Android apps are composed of we can finally run the app. We are going to do this using a tool called an emulator. An emulator is nothing more than a simulation of a phone that is run on your computer. 
+                        <br>
+                        <br>
+                        While in Android Studio click on tools in the menu bar (the very top bar on the screen). This will reveal a drop down menu, select Android from that menu to reveal yet another drop down menu. From there we will select the option AVD Manager (Android Virtual Device Manager). This tool is used to manage all of our virtual devices! Now it's possible that Android already created a device for us, but we are not going to use that one. We are going to create a new device by selecting Create Virtual Device. Virtual Devices have two major aspects to them, the Hardware Profile and the System Image.
+                        <br>
+                        <br>
+                        <h3>Hardware Profile</h3>
+                        The Harware Profile is the actual phone that we will be simulating, there are many pre-set profiles to choose from, but we are going to create our own by selecting New Hardware Profile. This is going to open up the Configure Hardware Profile screen. From here we can completely customize the kind of device we want to simulate, including creating phones that don't currently exist. We have complete control over the type of device, size of the screen, and a whole host of other options. We are only going to change two things, the Device Name and the amount of Memory it uses. The purpose of the Device Name will become evident in a few minutes, for now lets change it to Default Phone. We are going to change Memory from 2 GB to 1 GB, we are doing this to prevent a few bugs from being a nuissence down the road. Now by clicking ok our Hardware Profile will be saved! Now our custom Hardware Profile is saved in the list of hardware we can choose from under the device name that we choose to give it, in this case Default Phone.
+                        <br>
+                        <br>
+                        <h3>System Image</h3>
+                        Now we are presented with a whole bunch of System Images that look awfully similar. Before we decide which one to use however lets dwelve into what a System Image is. The System Image is the software that our virtual device is going to simulate. The ability to customize both the Hardware Profile and System Image of our phone allows us to test our app virtually on any device imaginable. In proffesional Android development testing forward (how our app behaves when the Target SDK of our app is below the SDK running on the device) and backwards (how our app behaves when the Target SDK of our app is above the SDK running on the device) compatibility is extremely important. So all of the System Images to choose from look relatively the same, how do we choose? To do that we have to understand what the four components listed of the System Images mean. 
+                        <br>
+                        <br>
+                        <h4>Release Name</h4>
+                        The Release Name is a code name used for a group version numbers. The naming mechanism is similar to how storms are named. If a storm reaches a certain threshold size it is given a name. The names are allocated by letter of the alphabete in order. The name of the first strom starts with an A, the name of the second starts with a B, and so on (naming system for storms is really interesting). Coming back to Android Release Names, essentially when Google introduces a big new update it changes the Release Name of the new update to the name of a dessert that starts with the next letter of the alphabete, because what sells better than dessert? 
+                        <br>
+                        <br>
+                        <h4>API Level</h4>
+                        API Level is confusingly similar to the Release Name. The API Level is determined by changes to the internal API that the Android framework and Android developers use to make applications work. Android updates are designed to be additive and to expand the current framework, ensuring that Android apps targeting older API Levels will still be usuable in newer API Levels. To make this happen Google depreciates certain features older API Levels in newer API Levels instead of completely removing them. The larger the difference between API Levels the harder it becomes to make forward and backwards compatability automatic. Essentially you can use the Release Name and API Level to gauge how much work it is going to be to ensure forward and compatibility. Generally each Release Name has no more than two or three API Levels associated with it. This means that apps that target the same Release Name as the Release Name of the software on a device will have to  little to no work to required to ensure that the app works properly on that phone. Apps and phones with one Release Name seperation will likely require some work ensure proper functionality, multiple Release Name seperation will likely require even more work. Essentially as the API Levels change the app is going to have to have extra code included to achieve the same functionality on different phones. This is where the Minimum SDK we talked about earlier comes in, phones below the Minimum SDK of am app are unable to download the app, thus the developers do not have to worry about making sure their app works on phone below their Minimum SDK which saves them a lot of time. 
+                        <br>
+                        <br>
+                        <h4>ABI</h4>
+                        The ABI is the Android Binary Interface. It is the computer architecture that powers the phone (remeber smart phones are small computers). We are not going to really worry about what that means because at this stage it is not really important. What we do need to know however is the surface level difference between armeabi-v7a and x86. Armeabi-v7a is very close to the architecture of an actual Android phone, but will make your emulator slow. x86 is not as close to the actual architecture of an Android phone, but it will make you emuolator less slow. Emulators are slow, this is a core tenant of Android development. 
+                        <br>
+                        <br>
+                        <h4>Target</h4>
+                        Target is the particular version of Android that the phone will be running. Each API Level has multiple versions within them, the differences between versions within the same API Level are usually minor and require no work to ensure proper functionality. Remember: Release Name > API Level > versions. 
+                        <br>
+                        <br>
+                        <h3>More on System Images</h3>
+                        So now we know what the different components are, how are we gonna choose? Since we don't want to worry about compatibility issues we are just going to pick the latest version! So we are going to go with Release Name Lollipop, API Level 22, ABI x86 (for speed), and Target Android 5.1.1.
+                        <br>
+                        <br>
+                        <h3>AVD Verification</h3>
+                        Now we are at the last Configuration step, the AVD verfication. We need to give this AVD a Name so lets call it Default Phone API 22 x86. Everything else should be in order so we are finished! After a few minutes our new virtual device should appear in our AVD Manager.
+                        <br>
+                        <br>
+                        <h3>Press Play</h3>
+                        Now that we have a properly configured virtual device we can run our very first Android app! In the menu bar we are going to select Run and then in the drop down select Run 'app'. A window asking us to choose our device is going to appear (this may take a few momments), we are going to select our virtual device Default Phone API 22 x86 from the drop down. Now the emulator is going to boot up our virtual device, and our app will be on that virtual device. It may take a few minutes for the emulator to be finished loading. Remember emulators and IDEs are powerful, but slow. 
+                        <br>
+                        <br>
+                        We finally have our app working, Hello World, the most inspiring words a novice programmer can ever read.
+
+                        <h1>Wait but I didn't do anything</h1>
+                        <div>
+                            It may not seem like you did anything, but what we did today was actually a lot. This process we went through is known as Onboarding. It is the process of acquiring, configuring, and achieving basic literacy of all of the software and tools that we to build the applications we want to build. In major corporations this process of Onboarding can take up to a month and we managed to do the same thing (albeit significantly smaller scope) in a day! 
+                            <br>
+                            
+                            <h3>Rome was not built in a day, programming is something you learn over a 1000 tiny steps, and Android is no different.</h3>
+                        </div>
+
+
+
                     </div>
 
                 </div>
