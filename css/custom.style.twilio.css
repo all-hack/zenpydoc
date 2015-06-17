@@ -1,7 +1,33 @@
 h1, h2, h3, h4, h5{
-	text-align: center;
+	text-align: left;
 }
 
+.triangle-right {
+	width: 0;
+	height: 0;
+	border-top: 10px solid transparent;
+	border-left: 20px solid #E22228;
+	border-bottom: 10px solid transparent;
+	display: inline-block;
+	float:left;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: .5%;
+	margin-right: 1%;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-top: 20px solid #368F2C;
+	float:left;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	margin-left: .5%;
+	margin-right: 1%;
+}
 
 
 #jumbotron{
@@ -14,7 +40,7 @@ h1, h2, h3, h4, h5{
 
 @media (min-width: 434px) {
 	h1, h2, h3, h4, h5{
-		text-align: left;
+		/*text-align: left;*/
 	}
 }
 
