@@ -20,19 +20,19 @@ dict['background'] = "\
 dict['setting-up-our-computer'] = " \
 		<div class='textDiv center-block setting-up-our-computer'> \
 		    First, before we do anything we have to make sure that our Mac system software is up to date. \
-		    The next step is to check if we have JDK 6 (Java Developer Kit) or higher installed, we can \
+		    The next step is to make sure that we have JDK 6 (Java Developer Kit) or higher installed. We can \
 		    do this by typing the <code class='prettyprint'>javac -version</code> into a terminal window. If the appropriate JDK \
 		    is not installed we will have to \
 		    <a href='http://www.oracle.com/technetwork/java/javase/downloads/index.html'>download it</a>. \
 		    <br> \
 		    <br> \
-		    What we need is the Mac OS x64 version of the JDK. To download it first click the icon that \
-		    says Java, then accept Oracle's license agreement and then click the download link associated  \
+		    What we need is the Mac OS x64 version of the JDK. To download it first click the Java icon, \
+		    then accept Oracle's license agreement and then click the download link associated  \
 		    with the Mac OS x64 version of the JDK. A .dmg file will then be downloaded and put into our browser's \
-		    default download folder, it should be called something along the lines of jdk-8u45-macosx-x64.dmg. \
+		    default download folder. It should be called something along the lines of jdk-8u45-macosx-x64.dmg. \
 		    Double click the .dmg file to start the installation process. Installing the JDK should be very \
-		    simple just follow the instructions provided by the installer and let the computer do all the work. \
-		    Once it's finished we can double check that everything was successful by typing \
+		    simple, just follow the instructions provided by the installer and let the computer do all the work. \
+		    Once it's finished, we can double check that everything was successful by typing \
 		    <code class='prettyprint'> javac -version </code> once more in the terminal. \
 		</div>";
 
@@ -47,7 +47,7 @@ dict['setting-up-android-studio'] = " \
 		    <br> \
 		    <br> \
 		    Double click the .dmg file and then drag Android Studio into our Applications folder. \
-		     Double click the Android Studio icon to start the installation process. Android Studio \
+		     Launch Android Studio to start the installation process. Android Studio \
 		     is going to ask us if we want to import any settings from a previous version of Android \
 		     Studio. Since we are doing a fresh install we will select the bottom option to not import \
 		     any settings, however if we were attempting to manually update Android Studio this would be \
@@ -74,10 +74,10 @@ dict['setting-up-android-studio'] = " \
 		    After finishing the install, Android Studio should have launched a small window \
 		     containing two panels, one labeled Recent Projects and the other Quick Start. We \
 		     will call this the Welcome Screen from now on. Under Quick Start we are going to \
-		     select configure. Then we are going to select SDK Manager. This will open up \
-		     Android Studio's SDK (Software Developer Kit) Manager, which is a tool we use to \
+		     select configure. Then we are going to select SDK Manager. This will open up the \
+		     Android Studio SDK (Software Developer Kit) Manager, which is a tool we use to \
 		     download and manage new packages. We can download packages individually or as groups, \
-		     with the same interface that we previously used for license agreements. Android Studio \
+		     with the same interface that we previously used for the license agreements. Android Studio \
 		     already selected a few packages for us to download, that's okay leave them be. Minimize \
 		     the drop down arrows and select the Tools group, the Android 5.1.1 (API 22) group, and \
 		     the Android 4.0.3 (API 15) group. Then click install packages. Accept the licenses and click install. \
@@ -92,51 +92,71 @@ dict['starting-the-project'] = " \
 		    Now that we have Android Studio set up and ready to go it's time to start our first project! \
 		    <br> \
 		    Go back to the Welcome Screen and select Start a new Android Studio project. \
-		    The project configuration GUI (Graphical User Interface) should pop up. This  \
-		    configuration has three phases: Project Configuration, Target Android  \
+		    The project wizard should pop up. This is a GUI (graphical user interface) and it has \
+		    three phases: Project Configuration, Target Android  \
 		    Device Configuration, and Template Activity Selection. \
 		    <br> \
-		    <h3>Project Configuration</h3> \
-		    <div>  \
-		        The Project Configuration phase has \
-		        four components: the Application Name, Company Domain, \
-		        Package Name, and Project Location. \
-		        <br> \
-		        <br> \
-		        The Application Name is the name of the app that will appear in the \
-		        Google Play store as well as the Home screen of devices. \
-		        <br> \
-		        <br> \
-		        The Package Name is the unique identifier that Android will use for \
-		         our project/package. For now we can think of the difference between  \
-		         projects and packages as similar to the difference between organizations \
-		          and departments. Organizations and departments are abstract logical \
-		          containers of people. Organizations contain departments, however, small \
-		          organizations can be taken and turned into a department of bigger organizations. \
-		          Similarly projects and packages are both abstract logical containers \
-		          of functionality, but projects contain packages, and can in turn become  \
-		          packages of larger projects. The Package Name is generally automatically  \
-		          generated as a combination of the Company Domain and the Application Name. \
-		          This is to a practice to easily prevent duplicate Package Names. Two companies \
-		          may have two different Android apps with the same name, but one company will \
-		          not have two different Android apps with the same name. Thus by combining the \
-		          Company Domain and Application Name we have an easy and memorable unique identifier. \
-		        <br> \
-		        <br> \
-		        The Company Domain is the domain name or url of the company \
-		        developing the Android app. It is used to generate the Package Name. \
-		        Unless we are planning to release our app onto the Google Play store, it is not \
-		        important. We are going to abritarily pick use myCompany.com as the Company Domain. \
-		        <br> \
-		        <br> \
-		        The Project Location is the location in our project will be saved in \
-		        our computer file system. This will generally store the project in a directory \
-		        matching the Application Name in the AndroidProjects directory in the home directory \
-		        of our computer file system. This ensures that users are only able to interact with \
-		        their own projects. \
-		    </div> \
-		    <h3>Target Android Device Configuration</h3> \
-		    <div> \
+		    <div id='project-configuration'> \
+                <div class='triangle-right' onClick='dropdown(this, this.parentElement.id);'></div> \
+    			<h2>Project Configuration</h2> \
+            </div> \
+		    \
+		    <div id='target-android-device-configuration'> \
+                <div class='triangle-right' onClick='dropdown(this, this.parentElement.id);'></div> \
+    			<h2>Target Android Device Configuration</h2> \
+            </div> \
+		    \
+		    \
+		    <div id='template-activity-selection'> \
+                <div class='triangle-right' onClick='dropdown(this, this.parentElement.id);'></div> \
+    			<h2>Template Activity Selection</h2> \
+            </div> \
+            \
+		</div>";
+
+
+dict['project-configuration'] =" \
+		<div class='center-block textDiv project-configuration'>  \
+	        The Project Configuration phase has \
+	        four components: the Application Name, Company Domain, \
+	        Package Name, and Project Location. \
+	        <h3>Application Name</h3> \
+	        The Application Name is the name of the app that will appear in the \
+	        Google Play store as well as the Home screen of devices. \
+	        <h3>Package Name</h3> \
+	        The Package Name is the unique identifier that Android will use for \
+	         our project/package. For now we can think of the difference between  \
+	         projects and packages as similar to the difference between organizations \
+	          and departments. Organizations and departments are abstract  \
+	          containers of people. Organizations contain departments, however, small \
+	          organizations can be taken and turned into a department of bigger organizations. \
+	          Similarly, projects and packages are both abstract containers \
+	          of functionality, but projects contain packages, and can in turn become  \
+	          packages of larger projects. This is not the most accurate description of the relationship \
+	          between packages and projects, but for now it will do. The Package \
+	          Name is generally automatically  \
+	          generated as a combination of the Company Domain and the Application Name. \
+	          This is a practice to easily prevent duplicate Package Names. Two companies \
+	          may have two different Android apps with the same name, but one company will \
+	          not have two different Android apps with the same name. Thus by combining the \
+	          Company Domain and the Application Name we have an easy and memorable unique identifier. \
+	        <h3>Company Domain</h3> \
+	        The Company Domain is the domain name or url of the company \
+	        developing the Android app. It is used to generate the Package Name. \
+	        Unless we are planning to release our app onto the Google Play store, it is not \
+	        important. We are going to abritarily pick myCompany.com as the Company Domain. \
+	        <br> \
+	        <br> \
+	        <h3>Project Location</h3> \
+	        The Project Location is the location that our project will be saved in \
+	        our computer file system. Generally the project will be stored in a directory \
+	        matching the Application Name in the AndroidProjects directory in the home directory \
+	        of our computer file system. This ensures that users are only able to interact with \
+	        their own projects. \
+	    </div>";
+
+dict['target-android-device-configuration'] = " \
+	    <div class='textDiv center-block target-android-device-configuration'> \
 		        The Target Android Device Configuration phase has one component with \
 		         four options. In this phase we choose what kind of device, and the  \
 		         minimum SDK required to be able to  download our Android app. Since  \
@@ -153,30 +173,40 @@ dict['starting-the-project'] = " \
 		          <a href='https://developer.android.com/about/dashboards/index.html'>breakdown of \
 		          devices that are active on the Google Play store, categorized by SDK</a>. Google will \
 		           not show our application to devices that are using a version of Android older than the Minimum SDK we set. \
-		    </div> \
-		    <h3>Template Activity Selection</h3> \
-		    <div> \
-		        The Template Activity Selection phase is also one component with multiple options. \
-		         Each option is a different type of Template Activity we can use to make  \
-		         the common first steps of developing particular types of applications faster. \
-		          We are going to select Blank Activity in a second. First we must learn what an Activity is. \
-		        <br> \
-		        <br> \
-		        Activities are a pre-determined class in the Android framework and they are \
-		        the building blocks of the UI (User Interface). All applications with a UI must \
-		        inherit this class to create windows that the user can interact with. Most \
-		        applications with a UI will have one activity designated as the main activity \
-		        that will be the first activity to be launched. Understanding how Activities work \
-		         and their life-cycle is vital to proper Android development, however for today \
-		         this is enough detail to move forward. \
-		        <br> \
-		        <br> \
-		        Now we are going to select the Blank Activity option from the Template Activity \
-		        Selection phase. Since we choose a template Activity we will now be presented with a \
-		        configuration screen for that Activity. \
-		        <br> \
-		        <h3>Activity Configuration</h3> \
-		        This screen has four components that are all simply identifiers that we \
+		    </div>";
+
+dict['template-activity-selection'] = " \
+		<div class='center-block textDiv template-activity-selection'> \
+	        The Template Activity Selection phase is also one component with multiple options. \
+	         Each option is a different type of Template Activity we can use to make  \
+	         the common first steps of developing particular types of applications faster. \
+	          We are going to select Blank Activity in a second. First we must learn what an Activity is. \
+	        <br> \
+	        <br> \
+	        Activities are a pre-determined class in the Android framework and they are \
+	        the building blocks of the UI (User Interface). All applications with a UI must \
+	        inherit this class to create windows that the user can interact with. Most \
+	        applications with a UI will have one activity designated as the main activity \
+	        that will be the first activity to be launched. Understanding how Activities work \
+	         and their life-cycle is vital to proper Android development, however for today \
+	         this is enough detail to move forward. \
+	        <br> \
+	        <br> \
+	        Now we are going to select the Blank Activity option from the Template Activity \
+	        Selection screen. Since we choose a template Activity we will now be presented with a \
+	        configuration screen for that Activity. \
+	        <br> \
+\
+	        <div id='activity-configuration'> \
+                <div class='triangle-right' onClick='dropdown(this, this.parentElement.id);'></div> \
+    			<h2>Activity Configuration</h2> \
+            </div> \
+            \
+	    </div>";
+
+dict['activity-configuration'] = " \
+	    <div class='center-block textDiv activity-configuration'> \
+		        The Activity Configuration screen has four components, each one of them an identifier, that we \
 		        and the Android framework will use to keep track of the elements that are \
 		        automatically generated for us by the Blank Activity template. These \
 		        elements are the Activity Name, the Layout Name, the Title, and the Menu \
@@ -187,8 +217,7 @@ dict['starting-the-project'] = " \
 		         The Menu Resource Name is the identifier we will use to refer to our options \
 		         menu, which is a part of the Action Bar. In this particular template the Title \
 		         is on the left side of the Action Bar and the Options Menu is on the right side. \
-		    </div> \
-		</div>";
+		    </div>";
 
 dict['reviewing-the-project'] = " \
 		<div class='textDiv center-block reviewing-the-project'> \
@@ -449,16 +478,21 @@ var hdict = {};
 
 
 
+
+
 //drop down function 
 function dropdown(triangle, injectionID){
 	console.log($(triangle));
 	$(triangle).toggleClass("triangle-down triangle-right");
 	if (triangle.className === "triangle-down"){	
 		console.log("triangle turned green");
+		console.log(injectionID);
+
 		$('#'+injectionID).append(dict[injectionID]);
 	}
 	else{
 		console.log("triangle turned red")
+		console.log(injectionID);
 		$("div").remove("."+injectionID);
 	}	
 }
