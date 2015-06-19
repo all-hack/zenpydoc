@@ -1,9 +1,8 @@
 
 var dict = {};
-
 // dictionary of elements 
 dict['background'] = "\
-		<div class='textDiv center-block background'> \
+		<div class='textDiv center-block background' style='position:relative'> \
             Welcome! Today we are going to get past our lack of knowledge of Android development \
             and reach the novice programers first milestone, the awe inspiring Hello World application. \
             We are going to be using a Mac so if you have another OS you can follow along, but it may make more \
@@ -22,7 +21,7 @@ dict['setting-up-our-computer'] = " \
 		<div class='textDiv center-block setting-up-our-computer'> \
 		    First, before we do anything we have to make sure that our Mac system software is up to date. \
 		    The next step is to check if we have JDK 6 (Java Developer Kit) or higher installed, we can \
-		    do this by typing the command javac -version into a terminal window. If the appropriate JDK \
+		    do this by typing the <code class='prettyprint'>javac -version</code> into a terminal window. If the appropriate JDK \
 		    is not installed we will have to \
 		    <a href='http://www.oracle.com/technetwork/java/javase/downloads/index.html'>download it</a>. \
 		    <br> \
@@ -34,7 +33,7 @@ dict['setting-up-our-computer'] = " \
 		    Double click the .dmg file to start the installation process. Installing the JDK should be very \
 		    simple just follow the instructions provided by the installer and let the computer do all the work. \
 		    Once it's finished we can double check that everything was successful by typing \
-		    javac -version once more in the terminal. \
+		    <code class='prettyprint'> javac -version </code> once more in the terminal. \
 		</div>";
 
 dict['setting-up-android-studio'] = " \
@@ -191,7 +190,6 @@ dict['starting-the-project'] = " \
 		    </div> \
 		</div>";
 
-
 dict['reviewing-the-project'] = " \
 		<div class='textDiv center-block reviewing-the-project'> \
 		    Now we have our project opened in Android Studio. Android apps \
@@ -264,8 +262,7 @@ dict['reviewing-the-project'] = " \
 		                only talk about one, the onCreate() function. \
 		                <br> \
 		                <br> \
-		                @Overwrite  \
-		                protected void onCreate(Bundle savedInstanceState) \
+		                <pre class='prettyprint'>@Overwrite<br>protected void onCreate(Bundle savedInstanceState)</pre> \
 		                <br> \
 		                Ignore the key words protected and void, for today they are not important. The \
 		                onCreate(Bundle savedInstanceState) is the function that dictates what MainActivity \
@@ -438,21 +435,50 @@ dict['running-the-application'] = " \
             </div> \
         </div>";
 
-//#368F2C
+//dict 2 
+var hdict = {};
 
+
+
+
+
+
+
+
+
+
+
+
+//drop down function 
 function dropdown(triangle, injectionID){
+	console.log($(triangle));
 	$(triangle).toggleClass("triangle-down triangle-right");
 	if (triangle.className === "triangle-down"){	
-		console.log(dict);
+		console.log("triangle turned green");
 		$('#'+injectionID).append(dict[injectionID]);
 	}
 	else{
-		console.log("jj")
+		console.log("triangle turned red")
 		$("div").remove("."+injectionID);
-	}
-	
-
-	console.log(triangle);
+	}	
 }
+
+//hover 
+'<img src="img/androidPics/A1.png" style="width:100%; height:80%;">'
+var fi = "<div id='toolTip' style='background-color: black; position: absolute; padding:8px;font-size: 14px; color: burlywood;'>kay thanks bye adjhf a daa ada adaa a ad da  da da ad a a dda a da daohfohohgodhoh aodah</div>"
+$(document).ready( function (){
+	$('.toolTip').tooltip({
+	    items: ".toolTip",
+	    content: function(){
+	    	//return $(this)[0].innerHTML;
+	    	return "fhlskjfhj fsflkj fslkjhjksl fjklsljkfs jklfshjklfsjklfs jklfskljfs jklfs jlkfs kjlfs kjlh kjlfsh kjlsfh "
+
+
+
+	    },
+		position: { my: "left bottom-25px", at: "center", collision:"fit" }	
+	});
+	
+});
 
 

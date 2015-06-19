@@ -1,5 +1,20 @@
-h1, h2, h3, h4, h5{
-	text-align: left;
+.toolTip{
+	color:red;
+}
+
+.ui-tooltip{
+
+	min-width:410px;
+
+
+}
+
+.ui-tooltip-content{
+
+
+	padding: 5px;
+	color: black;
+	background-color: white;
 }
 
 .triangle-right {

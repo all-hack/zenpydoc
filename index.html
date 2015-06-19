@@ -7,24 +7,27 @@
 <link rel="stylesheet" type="text/css" href="css/bootstrap-theme.min.css">
 <link rel="stylesheet" type="text/css" href="css/custom.style.twilio.css"> 
 <link href='http://fonts.googleapis.com/css?family=Alegreya|Allerta' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+
 <script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
 <script type="text/javascript" src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="js/custom.twilio.js"></script>
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
 
-font-family: 'Libre Baskerville', serif;
+
 <style type="text/css"> *{ 
-    /*font-family: 'Libre Baskerville', serif;*/
+
 
     font-family: 'Alegreya', serif;
-    /*
-    font-family: 'Inconsolata', ;
-    font-family: 'Fjalla One', sans-serif;
-    font-family: 'Allerta', sans-serif;*/
+
     }
 </style>
 
 </head>
 <body>
+    
+    
     <nav id="myNavbar" class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="container">
@@ -52,15 +55,17 @@ font-family: 'Libre Baskerville', serif;
                 <div style="padding-left:1%;">
 
                     <div id="background">
-                        <div class="triangle-right" onClick="dropdown(this, this.parentElement.id);"></div>
-                        <h1>Background</h2>
+                        <div id="start" class="triangle-right" onClick="dropdown(this, this.parentElement.id);"></div>
+                        <h1><span>Background</span></h1>
                     </div>
+                    <script type="text/javascript">
+                        dropdown($('#start')[0], $('#start')[0].parentElement.id);                                            
+                    </script>
 
                     <div id="setting-up-our-computer">
                         <div class="triangle-right" onClick="dropdown(this, this.parentElement.id);"></div>                
                         <h1>Setting up our computer</h1>                        
                     </div>
-                    
 
                     <div id="setting-up-android-studio">
                         <div class="triangle-right" onClick="dropdown(this, this.parentElement.id);"></div>                
