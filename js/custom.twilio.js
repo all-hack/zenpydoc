@@ -2,7 +2,7 @@
 var dict = {};
 // dictionary of elements 
 dict['background'] = "\
-		<div class='textDiv center-block background' style='position:relative'> \
+		<div class='textDiv center-block background' > \
             Welcome! Today we are going to get past our lack of knowledge of Android development \
             and reach the novice programers first milestone, the awe inspiring Hello World application. \
             We are going to be using a Mac so if you have another OS you can follow along, but it may make more \
